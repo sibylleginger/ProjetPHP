@@ -47,7 +47,7 @@
       <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
           <span class="android-title mdl-layout-title">
-            <h1>pPELUCHE</h1>
+            <h1>PELUCHE</h1>
           </span>
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="android-header-spacer mdl-layout-spacer"></div>
@@ -55,9 +55,10 @@
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Accueil</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="peluches.html">Nos Peluches</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="index.php?action=readAll">Nos Peluches</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="panier.html">Mon Panier</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="contact.html">Contact</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="index.php?action=readAll&controller=utilisateur">Utilisateurs</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="index.php?action=create">Créer</a>
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
@@ -82,7 +83,7 @@
 <?php
 // Si $controleur='voiture' et $view='list',
 // alors $filepath="/chemin_du_site/view/voiture/list.php"
-$filepath = File::build_path(array("view", $controller, "$view.php"));
+$filepath = File::build_path(array("view", $controller, "view.php"));
 require $filepath;
 ?>
 </body>
