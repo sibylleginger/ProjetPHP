@@ -74,6 +74,17 @@ class ControllerPeluche {
         //require_once File::build_path(array('view', 'voiture','create.php'));
         require File::build_path(array('view', 'view.php'));
     }
+
+    public static function delete() {
+
+        $nom = $_GET['nom'];
+        $peluche = ModelPeluche::deleteByNom($nom);
+        $tab_p = ModelPeluche::getAllPeluches();
+        $view = 'deleted';
+        $pagetitle = 'deleted';
+        $controller = 'peluche';
+        require_once File::build_path(array('view', 'view.php'));
+    }
 }
 
 ?>
