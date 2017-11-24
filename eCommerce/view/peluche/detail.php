@@ -1,7 +1,9 @@
 
 <?php
-echo "{$peluche->getDescription()}<br>";
 $nom = $_GET['nom'];
+echo "{$nom} : <br>";
+echo "{$peluche->getDescription()}<br>";
+
 echo " C'est une peluche de taille : {$peluche->getTaille()}.";
 echo "<br> Prix : {$peluche->getPrix()} €";
 
