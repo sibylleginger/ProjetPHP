@@ -136,6 +136,33 @@ class ModelPeluche extends Model {
         return $tab_peluche[0];
     }
 
+    public static function deleteByNom($nom) {
+        $sql = "delete from peluche where nom=:nom_tag";
+        // Préparation de la requête
+        $req_prep = Model::$pdo->prepare($sql);
+        $values = array(
+            "nom_tag" => $nom,
+                //nomdutag => valeur, ...
+        );
+        // On donne les valeurs et on exécute la requête     
+        $req_prep->execute($values);
+    }
+
+    public static function updateByNom($nom, $couleur, $prix, $description, $taille, $lastname) {
+        $sql = "UPDATE `peluche` SET `nom` =:tag_nom, `prix` =:tag_prix, `description` =:tag_description WHERE `voiture`.`nom` =:tag_lastname";
+        // Préparation de la requête
+        $req_prep = Model::$pdo->prepare($sql);
+        $values = array(
+            "tag_nom" => $nom,
+            "tag_prix" => $prix,
+            "tag_description" => $description,
+            "tag_lastname" => $lastname,
+                //nomdutag => valeur, ...
+        );
+        // On donne les valeurs et on exécute la requête     
+        $req_prep->execute($values);
+    }
+
 }
 
 ?>
