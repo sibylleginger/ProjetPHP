@@ -54,7 +54,7 @@
           <!-- Navigation -->
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Accueil</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="index.php?action=readAll">Accueil</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="index.php?action=readAll">Nos Peluches</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="panier.html">Mon Panier</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="index.php?action=readAll&controller=utilisateur">Utilisateurs</a>
