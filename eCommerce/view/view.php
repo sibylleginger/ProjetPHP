@@ -22,13 +22,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Ma petite pizza</title>
+    <title>Ma petite peluche</title>
 
     <!-- Page styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/style_nav.css">
     <style>
     #view-source {
       position: fixed;
@@ -47,7 +47,7 @@
       <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
           <span class="android-title mdl-layout-title">
-            <h1>PIZZA</h1>
+            <h1>peluche</h1>
           </span>
           <!-- Add spacer, to align navigation to the right in desktop -->
           <div class="android-header-spacer mdl-layout-spacer"></div>
@@ -63,7 +63,7 @@
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Accueil</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="pizzas.html">Nos Peluches</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="peluches.html">Nos Peluches</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="panier.html">Mon Panier</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="contact.html">Contact</a>
             </nav>
@@ -80,7 +80,7 @@
         </span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Accueil</a>
-          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="pizzas.html">Nos Peluches</a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="peluches.html">Nos Peluches</a>
           <a class="mdl-navigation__link mdl-typography--text-uppercase" href="panier.html">Mon Panier</a>
           <a class="mdl-navigation__link mdl-typography--text-uppercase" href="contact.html">Contact</a>
           <div class="android-drawer-separator"></div>
@@ -90,7 +90,6 @@
 <?php
 // Si $controleur='voiture' et $view='list',
 // alors $filepath="/chemin_du_site/view/voiture/list.php"
-
 $filepath = File::build_path(array("view", $controller, "$view.php"));
 require $filepath;
 ?>
