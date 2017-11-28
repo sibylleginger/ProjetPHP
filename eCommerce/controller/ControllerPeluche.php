@@ -24,14 +24,14 @@ class ControllerPeluche {
 
     public static function read() {
 
-        $nom_query = $_GET['nom'];
-        $peluche = ModelPeluche::getPelucheByNom($nom_query);
+        $idp_query = $_GET['idp'];
+        $peluche = ModelPeluche::getPelucheByidp($idp_query);
 
         if ($peluche == false) {
             /*  $view = 'error';
               $pagetitle = 'Attention erreur fatale mouahah';
               $controller = 'voiture';
-              //require_once File::build_path(array('view', 'voiture','error.php'));
+              //array('view', 'voiture','error.php'));
               require File::build_path(array('view', 'view.php')); */
 
             $typeError = "noPeluche";
@@ -68,22 +68,48 @@ class ControllerPeluche {
 
         $tab_p = ModelPeluche::getAllPeluches();
 
-        $view = 'Created';
+        $view = 'created';
         $pagetitle = 'Créée';
-        $controller = 'Peluche';
+        $controller = 'peluche';
         //require_once File::build_path(array('view', 'voiture','create.php'));
         require File::build_path(array('view', 'view.php'));
     }
 
     public static function delete() {
 
-        $nom = $_GET['nom'];
-        $peluche = ModelPeluche::deleteByNom($nom);
+        $idp = $_GET['idp'];
+        $peluche = ModelPeluche::deleteByidp($idp);
         $tab_p = ModelPeluche::getAllPeluches();
         $view = 'deleted';
         $pagetitle = 'deleted';
         $controller = 'peluche';
         require_once File::build_path(array('view', 'view.php'));
+    }
+
+    public static function update() {
+        $view = 'update';
+        $pagetitle = 'Modifiez votre peluche';
+        $controller = 'peluche';
+        //require_once File::build_path(array('view', 'voiture','create.php'));
+        require File::build_path(array('view', 'view.php'));
+    }
+
+    public static function updated() {
+
+        $idp = $_GET['idp'];
+        $nom = $_GET['nom'];
+        $prix = $_GET['prix'];
+        $description = $_GET['description'];
+
+        $peluche = ModelPeluche::updateByidp($idp, $nom, $prix, $description);
+
+        $tab_p = ModelPeluche::getAllPeluches();
+
+        $view = 'updated';
+        $pagetitle = 'updated';
+        $controller = 'peluche';
+        //require_once File::build_path(array('view', 'voiture','create.php'));
+        require File::build_path(array('view', 'view.php'));
     }
 }
 
